@@ -45,6 +45,8 @@ print("\n--- Creando encoders para las categorías ---")
 encoders = {}
 category_cols = [f'{v}_Category' for v in variables_a_discretizar if f'{v}_Category' in df_imputed.columns]
 
+print(f"Columnas de categorías encontradas: {category_cols}")
+
 for col in category_cols:
     if col in df_imputed.columns:
         le = LabelEncoder()
