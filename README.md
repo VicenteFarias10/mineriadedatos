@@ -1,4 +1,4 @@
-## se uso render.com en vez de github pages , ya que github pages no soporta el backend y tendria que haber convertido todo el python en javascript. por lo que se decidio usar render,tambien podria haber sido replit que tiene un funcionamiento similar, pero fue para darle una variacion
+## se uso render.com en vez de github pages , ya que github pages no soporta el backend y tendria que haber convertido todo el python en javascript. por lo que se decidio usar render,tambien podria haber sido replit que tiene un funcionamiento similar, pero fue para darle una variacion, ademas, se tuvo que uasr git lfs debido a el alto tamaño de los archivos.
 
 ## Nota sobre archivos grandes
 

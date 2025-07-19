@@ -14,11 +14,7 @@ df = pd.read_csv('wheaterPba3Completo.csv')
 
 print("Preparando datos para análisis de evaporación...")
 
-# Convertir 'Date' a datetime si existe
-if 'Date' in df.columns:
-    df['Date'] = pd.to_datetime(df['Date'])
-
-# --- Mapeo de Localidades a Latitud y Longitud (del código del usuario) ---
+# --- Mapeo de Localidades a Latitud y Longitud ---
 location_coords = {
     'Albury': (-36.080556, 146.916389), 'BadgerysCreek': (-33.87, 150.73), 'Cobar': (-31.49, 145.84),
     'CoffsHarbour': (-30.30, 153.11), 'Moree': (-29.46, 149.85), 'Newcastle': (-32.93, 151.75),
