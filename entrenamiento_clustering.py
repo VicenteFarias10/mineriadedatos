@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 
 print("Cargando datos...")
-df = pd.read_csv('../data/wheaterPba3Completo.csv')
+df = pd.read_csv('wheaterPba3Completo.csv')
 
 print("Preparando datos para clustering...")
 # Seleccionar variables para clustering
@@ -28,11 +28,11 @@ clusters = kmeans.fit_predict(X_scaled)
 
 # Guardar modelo y scaler
 print("Guardando modelo de clustering...")
-joblib.dump(kmeans, '../models/clustering/modelo_entrenado.pkl')
-joblib.dump(scaler, '../models/clustering/scaler.pkl')
+joblib.dump(kmeans, 'modelo_clustering.pkl')
+joblib.dump(scaler, 'scaler_clustering.pkl')
 
-print("Modelo de clustering guardado como '../models/clustering/modelo_entrenado.pkl'")
-print("Scaler guardado como '../models/clustering/scaler.pkl'")
+print("Modelo de clustering guardado como 'modelo_clustering.pkl'")
+print("Scaler guardado como 'scaler_clustering.pkl'")
 
 # Crear visualización de ejemplo
 print("Creando visualización de ejemplo...")
@@ -79,12 +79,12 @@ plt.yticks(range(len(features)), features)
 plt.title('Matriz de Correlación')
 
 plt.tight_layout()
-plt.savefig('../models/clustering/analisis_clustering.png', dpi=300, bbox_inches='tight')
-print("Visualización guardada como '../models/clustering/analisis_clustering.png'")
+plt.savefig('analisis_clustering.png', dpi=300, bbox_inches='tight')
+print("Visualización guardada como 'analisis_clustering.png'")
 plt.close()
 
 print("\n--- Entrenamiento de clustering completado ---")
 print("Archivos generados:")
-print("- ../models/clustering/modelo_entrenado.pkl: Modelo entrenado")
-print("- ../models/clustering/scaler.pkl: Scaler")
-print("- ../models/clustering/analisis_clustering.png: Visualización de ejemplo") 
+print("- modelo_clustering.pkl: Modelo entrenado")
+print("- scaler_clustering.pkl: Scaler")
+print("- analisis_clustering.png: Visualización de ejemplo") 
