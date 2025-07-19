@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Script para entrenar todos los modelos automáticamente.
-Se ejecuta en Render.com para generar los archivos .pkl necesarios.
+Se ejecuta en Railway para generar los archivos .pkl necesarios.
 """
 
 import os
@@ -33,8 +33,15 @@ def main():
             print(f"Entrenando modelo: {script}")
             print(f"{'='*50}")
             try:
-                # Importar y ejecutar el script
-                exec(open(script).read())
+                # Crear un nuevo contexto para cada script
+                script_globals = {}
+                script_locals = {}
+                
+                # Leer y ejecutar el script
+                with open(script, 'r', encoding='utf-8') as f:
+                    script_code = f.read()
+                
+                exec(script_code, script_globals, script_locals)
                 print(f"✅ {script} completado exitosamente")
                 
                 # Limpiar memoria después de cada script
