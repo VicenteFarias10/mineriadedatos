@@ -27,5 +27,8 @@ Thumbs.db
 *.tmp
 *.temp
 
+# Model files (too large for GitHub)
+*.pkl
+
 # Data files (opcional - si no quieres subir los CSV grandes)
 # *.csv 
