@@ -31,4 +31,8 @@ Thumbs.db
 *.pkl
 
 # Data files (opcional - si no quieres subir los CSV grandes)
-# *.csv 
+# *.csv
+
+# Railway
+.railway/
+railway.toml 
